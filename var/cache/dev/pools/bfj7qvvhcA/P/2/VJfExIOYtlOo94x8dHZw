@@ -1,0 +1,56 @@
+<?php //%255BApp%255CEntity%255CRental%255D%255B1%255D
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['ApiPlatform\\Core\\Annotation\\ApiResource'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('ApiPlatform\\Core\\Annotation\\ApiResource')),
+        clone ($p['Doctrine\\ORM\\Mapping\\Entity'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Entity')),
+        clone ($p['Doctrine\\ORM\\Mapping\\Table'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Table')),
+        clone ($p['ApiPlatform\\Core\\Annotation\\ApiFilter'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('ApiPlatform\\Core\\Annotation\\ApiFilter')),
+    ],
+    null,
+    [
+        'stdClass' => [
+            'collectionOperations' => [
+                [
+                    'post' => [
+                        'controller' => 'App\\Controller\\CreateRentalController',
+                    ],
+                    'get',
+                    'put',
+                ],
+            ],
+            'attributes' => [
+                [
+                    'normalization_context' => [
+                        'groups' => [
+                            'rentals',
+                        ],
+                    ],
+                ],
+            ],
+            'repositoryClass' => [
+                1 => 'App\\Repository\\RentalRepository',
+            ],
+            'name' => [
+                2 => 'rentals',
+            ],
+            'filterClass' => [
+                3 => 'ApiPlatform\\Core\\Bridge\\Doctrine\\Orm\\Filter\\DateFilter',
+            ],
+            'properties' => [
+                3 => [
+                    'dueDate' => 'include_null_after',
+                    'startDate' => 'include_null_after',
+                    'endDate' => 'include_null_after',
+                ],
+            ],
+        ],
+    ],
+    [
+        $o[0],
+        $o[1],
+        $o[2],
+        $o[3],
+    ],
+    []
+); }];

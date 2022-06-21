@@ -1,0 +1,10 @@
+App\Entity\Item:
+  item_{1..100}:
+    name: <text()>
+    description: <text()>
+    rent_price: 0
+    depositAmount: 0
+    agency: '@agency_1'
+    itemType: '@item_type_1'
+    endDateAvailable: <dateTimeBetween("now", "+7 days")>
+    images: ['@image_1','@image_2','@image_3']

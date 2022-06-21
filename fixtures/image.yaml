@@ -1,0 +1,4 @@
+App\Entity\Image:
+  image_{1..100}:
+    item: '@item_1'
+    file_path: 'Jeu-de-societe-Monopoly-Junior.jpg'

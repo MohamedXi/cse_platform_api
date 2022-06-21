@@ -1,0 +1,13 @@
+App\Entity\Rental:
+  rental_1:
+    startDate: <dateTimeBetween("now", "+7 days")>
+    user: '@user_1'
+    item: '@item_1'
+    due_date: <dateTimeBetween("+7 days", "+14 days")>
+    end_date: <dateTimeBetween("+7 days", "+14 days")>
+    depositPaid: 0
+    comment: 'no comment'
+    giveBy: '@user_1'
+    restitutionBy: '@user_1'
+
+

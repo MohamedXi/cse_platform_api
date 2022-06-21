@@ -1,0 +1,8 @@
+App\Entity\User:
+  user_{1..1}:
+    username: s.jelassi
+    first_name: <firstName()>
+    last_name: <lastName()>
+    email: <email()>
+    active: true
+    roles: ["ROLE_ADMIN"]

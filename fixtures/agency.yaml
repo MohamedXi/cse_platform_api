@@ -1,0 +1,3 @@
+App\Entity\Agency:
+  agency_1:
+    name: 'Rennes'

@@ -1,0 +1,17 @@
+userName;firstName;lastName;email;agency;roles;phoneNumber
+s.jelassi;Seifeddine;Jelassi;s.jelassi@yopmail.com;RENNES;ROLE_ADMIN;0606606060
+o.auboin;Olivier;Auboin;o.auboin@yopmail.com;RENNES;ROLE_ADMIN;0606606060
+t.bulle;Thomas;Bulle;t.bulle@yopmail.com;BORDEAUX;ROLE_ADMIN;0606606060
+l.etchebarne;Lucas;Etchebarne;l.etchebarne@yopmail.com;NANTES;ROLE_ADMIN;0606606060
+j.durand;Julien;Durand;j.durand@yopmail.com;RENNES;ROLE_ADMIN;0606606060
+w.rouillard;Willy;Rouillard;w.rouillard@groupe-creative.fr;NANTES;ROLE_COLLABORATOR;0606606060
+a.hadjali;arezki;HADJALI;aris.hadjali@gmail.com;PARIS;ROLE_ADMIN;0606606060
+k.fernando;Kevin;FERNANDO;k.fernando@groupe-creative.fr;PARIS;ROLE_ADMIN;0606606060
+c.rennes;c;Rennes;c.rennes@groupe-creative.fr;RENNES;ROLE_COLLABORATOR;0606606060
+c.strasbourg;c;strasbourg;c.strasbourg@groupe-creative.fr;STRASBOURG;ROLE_COLLABORATOR;0606606060
+a.flamand;a;flamand;a.flamand@groupe-creative.fr;NANTES;ROLE_COLLABORATOR;0606606060
+f.moquin;f;moquin;f.moquin@groupe-creative.fr;NANTES;ROLE_STOREKEEPER;0606606060
+s.garnier;s;garnier;s.garnier@groupe-creative.fr;NANTES;ROLE_ADMIN;0606606060
+b.desnos;benoit;desnos;b.desnos@groupe-creative.fr;NANTES;ROLE_ADMIN;0606606060
+s.criner;Sandra;criner;s.criner@groupe-creative.fr;NANTES;ROLE_ADMIN;0606606060
+a.flander;Agnes;FLANDER;a.flander@groupe-creative.fr;BORDEAUX;ROLE_COLLABORATOR;0606606060

@@ -1,0 +1,234 @@
+{
+	"info": {
+		"_postman_id": "48926283-1010-46d5-b8a6-691d6652d79b",
+		"name": "CSE-PLATFORM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Agencies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/agencies",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"agencies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agencies",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Rennes\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/agencies",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"agencies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ItemType",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/item_types",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"item_types"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ItemType",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Jeu vidéo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/item_types",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"item_types"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Items",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/items",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Items",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"agency\": \"/api/agencies/c8bb66f1-9406-4f34-ac62-25284d9e5224\",\r\n    \"name\": \"FIFA 21\",\r\n    \"description\": \"Fckin game for morons\",\r\n    \"rentPrice\": 3,\r\n    \"depositAmount\": 0,\r\n    \"itemType\": \"/api/item_types/1d369e47-e5ed-4f2e-90cf-0592f75da61c\",\r\n    \"tags\": [\r\n        \"/api/tags/ad40b091-506d-4f16-bd8b-71f6b93e39ec\"\r\n    ],\r\n    \"image\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/items",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/users",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Users",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"toto\",\r\n    \"firstName\": \"John\",\r\n    \"lastName\": \"Doe\",\r\n    \"email\": \"john@whoami.com\",\r\n    \"active\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/users",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tags",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/tags",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"tags"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tags",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Foot\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/tags",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"tags"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
