@@ -34,12 +34,12 @@ services:
       volumes:
         - .:/var/www/html:cached
       depends_on:
-        - mysql
+        - db
       networks:
         - cse_platform
 
-    mysql:
-      image: mysql:latest
+    db:
+      image: mariadb:latest
       container_name: ${COMPOSE_PROJECT_NAME}_mysql
       command: --default-authentication-plugin=mysql_native_password
       environment:
@@ -47,7 +47,7 @@ services:
         MYSQL_DATABASE: cseplatform
         MYSQL_USER: cseplatform
         MYSQL_PASSWORD: password
-        MYSQL_HOST: mysql
+        MYSQL_HOST: db
       ports:
         - "3306:3306"
       volumes:
@@ -62,7 +62,7 @@ services:
       ports:
         - "8080:8080"
       depends_on:
-        - mysql
+        - db
       networks:
         - cse_platform
 

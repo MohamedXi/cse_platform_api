@@ -34,6 +34,10 @@ ifeq ($(GITLAB_CI), 1)
 	PHPUNIT_OPTIONS := --coverage-text --colors=never
 endif
 
+# Create docker network
+network:
+	@docker network create cse_platform
+
 build: ## Build the development environment
 ifeq ($(INSIDE_DOCKER_CONTAINER), 0)
 	@HOST_UID=$(HOST_UID) HOST_GID=$(HOST_GID) docker-compose -f docker-compose.yml build
@@ -241,9 +245,9 @@ else
 	$(ERROR_ONLY_FOR_HOST)
 endif
 
-ssh-mysql: ## SSH to the mysql container
+ssh-db: ## SSH to the mysql container
 ifeq ($(INSIDE_DOCKER_CONTAINER), 0)
-	@HOST_UID=$(HOST_UID) HOST_GID=$(HOST_GID) docker-compose $(PROJECT_NAME) exec mysql bash
+	@HOST_UID=$(HOST_UID) HOST_GID=$(HOST_GID) docker-compose $(PROJECT_NAME) exec db bash
 else
 	$(ERROR_ONLY_FOR_HOST)
 endif
@@ -316,7 +320,8 @@ migrate: ## Migrate the database
 	@make exec cmd="php bin/console doctrine:migrations:migrate --no-interaction --all-or-nothing --env=test"
 
 fixtures: ## Load the fixtures
-	@make exec cmd="php bin/console doctrine:fixtures:load --env=test"
+	@make exec cmd="php bin/console doctrine:fixtures:load --no-interaction"
+	#@make exec cmd="php bin/console doctrine:fixtures:load --env=test --no-interaction"
 
 phpcs: ## Runs PHP CodeSniffer
 	@make exec-bash cmd="./vendor/bin/phpcs --version && ./vendor/bin/phpcs --standard=PSR12 --colors -p src tests"
@@ -340,12 +345,6 @@ ifeq ($(INSIDE_DOCKER_CONTAINER), 1)
 else
 	@make exec-by-root cmd="make phpmetrics"
 endif
-
-phpcpd: ## Runs php copy/paste detector
-	@make exec cmd="php phpcpd.phar --fuzzy src tests"
-
-phpmd: ## Runs php mess detector
-	@make exec cmd="php ./vendor/bin/phpmd src text phpmd_ruleset.xml --suffixes php"
 
 phpstan: ## Runs PHPStan static analysis tool
 ifeq ($(INSIDE_DOCKER_CONTAINER), 1)
